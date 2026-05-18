@@ -67,7 +67,7 @@ async function askGroq(prompt) {
 async function askOpenRouter(prompt) {
   const key = process.env.OPENROUTER_API_KEY;
   if (!key) throw new Error("OPENROUTER_API_KEY belum diisi di Vercel.");
-  const model = process.env.OPENROUTER_MODEL || "deepseek/deepseek-chat-v3-0324:free";
+  const model = process.env.OPENROUTER_MODEL || "openrouter/free";
   const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
